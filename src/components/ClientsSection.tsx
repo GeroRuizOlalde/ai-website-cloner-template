@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 
 const logos = [
@@ -52,11 +53,14 @@ export function ClientsSection() {
           }}
         >
           {duplicatedLogos.map((logo, index) => (
-            <img
+            <Image
               key={`${logo.alt}-${index}`}
               src={logo.src}
               alt={logo.alt}
-              className="h-[100px] max-w-[150px] md:h-[160px] md:max-w-[220px] object-contain flex-shrink-0"
+              width={220}
+              height={160}
+              unoptimized
+              className="h-[100px] w-auto max-w-[150px] md:h-[160px] md:max-w-[220px] object-contain flex-shrink-0"
             />
           ))}
         </div>

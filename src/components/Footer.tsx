@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import { LinkedInIcon } from "@/components/icons";
 
 const footerLinks = [
@@ -15,9 +17,11 @@ export function Footer() {
         <div className="mx-auto max-w-[1200px] grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* Column 1 - Logo & Description */}
           <div className="text-center md:text-left">
-            <img
+            <Image
               src="/images/logo-gpi.png"
               alt="GPI Consultores"
+              width={224}
+              height={74}
               className="h-[74px] w-auto mb-5 mx-auto md:mx-0"
             />
             <p className="text-white text-[15px] leading-[1.65] mb-4">
@@ -39,13 +43,13 @@ export function Footer() {
             </h3>
             <nav className="flex flex-col items-center gap-2">
               {footerLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className="text-white text-[15px] hover:text-[#DD183B] transition-colors"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>

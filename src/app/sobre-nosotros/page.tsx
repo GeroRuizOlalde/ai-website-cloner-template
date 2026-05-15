@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingElements } from "@/components/FloatingElements";
 import { ArrowRightIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
+
+export const metadata: Metadata = {
+  title: "Sobre Nosotros",
+  description:
+    "Fundada en 2007 en San Juan, GPI Consultores es líder en generación y gestión de proyectos de inversión. Conocé nuestra historia, misión, valores y equipo.",
+};
 
 /* ── Hero ── */
 function SobreNosotrosHero() {
@@ -250,9 +258,11 @@ function LeadersSection() {
 
               {/* Photo */}
               <div className="flex-shrink-0 overflow-hidden rounded-full">
-                <img
+                <Image
                   src={leader.imgSrc}
                   alt={leader.name}
+                  width={300}
+                  height={300}
                   className="h-[300px] w-[300px] rounded-full object-cover transition-transform duration-500 hover:scale-[1.05]"
                 />
               </div>

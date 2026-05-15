@@ -15,10 +15,23 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700", "800"],
 });
 
+const SITE_DESCRIPTION =
+  "GPI Consultores - Gestión de Proyectos de Inversión. Expertos en Formulación, Desarrollo, Gestión y Financiamiento de Proyectos de Inversión.";
+
 export const metadata: Metadata = {
-  title: "Inicio - GPI Consultores",
-  description:
-    "GPI Consultores - Gestión de Proyectos de Inversión. Expertos en Formulación, Desarrollo, Gestión y Financiamiento de Proyectos de Inversión.",
+  metadataBase: new URL("https://gpiconsultores.com.ar"),
+  title: {
+    default: "GPI Consultores | Gestión de Proyectos de Inversión",
+    template: "%s | GPI Consultores",
+  },
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    siteName: "GPI Consultores",
+    title: "GPI Consultores | Gestión de Proyectos de Inversión",
+    description: SITE_DESCRIPTION,
+  },
 };
 
 export default function RootLayout({

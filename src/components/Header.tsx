@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { LinkedInIcon } from "@/components/icons";
 
 const navLinks = [
@@ -40,46 +42,49 @@ export function Header() {
       <nav className="border-b-[3px] border-gpi-red bg-white">
         <div className="mx-auto flex max-w-[1200px] items-center justify-between px-10 py-6">
           {/* Logo */}
-          <a href="/">
-            <img
+          <Link href="/">
+            <Image
               src="/images/logo-gpi.png"
               alt="GPI Consultores"
               width={224}
               height={74}
+              priority
               className="h-[74px] w-[224px]"
             />
-          </a>
+          </Link>
 
           {/* Desktop Nav Links */}
           <div className="hidden items-center gap-10 md:flex">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="font-sans text-[18px] font-normal text-gpi-nav-text"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* Language Flags (desktop) */}
           <div className="hidden items-center gap-2 md:flex">
             <button type="button" onClick={() => switchLanguage("en")} className="opacity-80 hover:opacity-100 transition-opacity">
-              <img
+              <Image
                 src="/images/flag-en.svg"
                 alt="EN"
                 width={24}
                 height={24}
+                unoptimized
                 className="h-6 w-6"
               />
             </button>
             <button type="button" onClick={() => switchLanguage("es")} className="opacity-80 hover:opacity-100 transition-opacity">
-              <img
+              <Image
                 src="/images/flag-es.svg"
                 alt="ES"
                 width={24}
                 height={24}
+                unoptimized
                 className="h-6 w-6"
               />
             </button>
@@ -116,31 +121,33 @@ export function Header() {
           <div className="border-t border-gray-200 bg-white px-10 pb-6 md:hidden">
             <div className="flex flex-col gap-4 pt-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   className="font-sans text-[18px] font-normal text-gpi-nav-text"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
             <div className="flex items-center gap-2 pt-4">
               <button type="button" onClick={() => switchLanguage("en")} className="opacity-80 hover:opacity-100 transition-opacity">
-                <img
+                <Image
                   src="/images/flag-en.svg"
                   alt="EN"
                   width={24}
                   height={24}
+                  unoptimized
                   className="h-6 w-6"
                 />
               </button>
               <button type="button" onClick={() => switchLanguage("es")} className="opacity-80 hover:opacity-100 transition-opacity">
-                <img
+                <Image
                   src="/images/flag-es.svg"
                   alt="ES"
                   width={24}
                   height={24}
+                  unoptimized
                   className="h-6 w-6"
                 />
               </button>
