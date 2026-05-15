@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const TO_EMAIL = "cpn.mrodriguez@gmail.com";
+const TO_EMAIL = process.env.CONTACT_TO_EMAIL ?? "cpn.mrodriguez@gmail.com";
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL ?? "GPI Consultores <onboarding@resend.dev>";
 
 interface ContactPayload {
