@@ -212,10 +212,20 @@ export function ContactSection() {
             <div key={contact.name}>
               <p className="font-sans text-[17px] leading-[1.65] text-gpi-text">
                 <span className="font-bold">{contact.name}</span>:{" "}
-                {contact.phone}
+                <a
+                  href={`tel:${contact.phone.replace(/[^\d+]/g, "")}`}
+                  className="transition-colors hover:text-[#DD183B] hover:underline"
+                >
+                  {contact.phone}
+                </a>
               </p>
               <p className="font-sans text-[17px] leading-[1.65] text-gpi-text">
-                {contact.email}
+                <a
+                  href={`mailto:${contact.email}`}
+                  className="break-all transition-colors hover:text-[#DD183B] hover:underline"
+                >
+                  {contact.email}
+                </a>
               </p>
             </div>
           ))}
