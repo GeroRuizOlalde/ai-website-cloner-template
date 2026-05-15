@@ -40,6 +40,7 @@ export function ContactSection() {
     email: "",
     phone: "",
     message: "",
+    website: "", // honeypot — must stay empty
   });
   const [status, setStatus] = useState<SubmitStatus>({ state: "idle" });
 
@@ -77,6 +78,7 @@ export function ContactSection() {
         email: "",
         phone: "",
         message: "",
+        website: "",
       });
     } catch {
       setStatus({
@@ -93,6 +95,30 @@ export function ContactSection() {
       {/* Form Column */}
       <Reveal direction="right" className="w-full md:w-[60%]">
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+          {/* Honeypot: hidden from humans, bots tend to fill it. Off-screen
+              (not display:none) so naive bots still see and fill it. */}
+          <div
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              left: "-9999px",
+              width: 1,
+              height: 1,
+              overflow: "hidden",
+            }}
+          >
+            <label htmlFor="website">No completar este campo</label>
+            <input
+              type="text"
+              id="website"
+              name="website"
+              value={formData.website}
+              onChange={handleChange}
+              tabIndex={-1}
+              autoComplete="off"
+            />
+          </div>
+
           {/* Nombre */}
           <div>
             <label className="mb-1 block font-sans text-[16px] font-semibold text-[#0F172A]">

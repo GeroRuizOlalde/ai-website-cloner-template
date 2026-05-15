@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 function SobreNosotrosHero() {
   return (
     <section
-      className="relative flex min-h-[200px] items-end overflow-hidden bg-cover bg-center p-[10px]"
+      className="relative flex min-h-[200px] flex-col items-start justify-center overflow-hidden bg-cover bg-center px-10 py-[50px]"
       style={{
         backgroundImage: "url('/images/sobre-nosotros-hero.jpg')",
       }}
@@ -171,7 +171,7 @@ const valores = [
 function ValoresSection() {
   return (
     <section className="mx-auto max-w-[1200px] px-5 py-[10px]">
-      <h3 className="mb-2 font-heading text-2xl font-semibold text-gpi-text/40">
+      <h3 className="mb-2 font-heading text-2xl font-semibold text-[#0F172A]">
         Nuestros Valores
       </h3>
       <div className="mb-6 h-[3px] w-[80px] bg-[#DD183B]" />

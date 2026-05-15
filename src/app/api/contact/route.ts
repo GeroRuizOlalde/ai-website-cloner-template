@@ -10,6 +10,8 @@ interface ContactPayload {
   email?: string;
   phone?: string;
   message?: string;
+  /** Honeypot: hidden field, must stay empty for real humans. */
+  website?: string;
 }
 
 function escapeHtml(value: string) {
@@ -34,6 +36,12 @@ export async function POST(request: Request) {
     body = await request.json();
   } catch {
     return NextResponse.json({ error: "JSON inválido." }, { status: 400 });
+  }
+
+  // Honeypot: a bot filled the hidden field. Drop silently but answer 200
+  // so the bot believes it succeeded and doesn't retry.
+  if (body.website && body.website.trim() !== "") {
+    return NextResponse.json({ ok: true });
   }
 
   const firstName = body.firstName?.trim() ?? "";
