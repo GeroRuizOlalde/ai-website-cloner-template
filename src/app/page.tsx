@@ -19,6 +19,7 @@ export default function Home() {
         {/* GPI Consultores */}
         <VideoServiceSection
           videoSrc="/videos/consultores-office.mp4"
+          posterSrc="/images/background-page.png"
           title="GPI CONSULTORES"
           boldName="GPI CONSULTORES"
           description="En GPI CONSULTORES nos centramos en Desarrollo y Due Diligence de negocios, en Formulación de Proyectos, en Consultoría Económica-Financiera y en Asesoramiento Legal Integral de Negocios Mineros."
@@ -34,6 +35,7 @@ export default function Home() {
         {/* GPI Servicios de Construccion */}
         <VideoServiceSection
           videoSrc="/videos/construccion-site.mp4"
+          posterSrc="/images/servicios-hero.webp"
           title="GPI SERVICIOS DE CONSTRUCCIÓN"
           boldName="GPI SERVICIOS DE CONSTRUCCIÓN"
           description="En GPI SERVICIOS DE CONSTRUCCIÓN nos enfocamos en servicios relacionados con la ingeniería, diseño, construcción y servicios generales."

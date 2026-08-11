@@ -6,9 +6,9 @@ import { ContactoHero } from "@/components/ContactoHero";
 import { ContactSection } from "@/components/ContactSection";
 
 export const metadata: Metadata = {
-  title: "Contacto",
+  title: "Contacto — GPI Consultores San Juan",
   description:
-    "Contactá a GPI Consultores. Escribinos por el formulario o comunicate directamente con nuestro equipo en San Juan, Argentina.",
+    "Contactá a GPI Consultores en San Juan, Argentina. Escribinos por el formulario o comunicate directamente con nuestro equipo.",
 };
 
 export default function ContactoPage() {

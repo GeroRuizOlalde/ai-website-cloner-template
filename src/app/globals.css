@@ -156,3 +156,9 @@
 body {
   top: 0 !important;
 }
+
+/* Client logo carousel */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

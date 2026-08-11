@@ -3,6 +3,7 @@ import { Reveal } from "@/components/Reveal";
 
 interface VideoServiceSectionProps {
   videoSrc: string;
+  posterSrc?: string;
   title: string;
   description: string;
   boldName: string;
@@ -11,6 +12,7 @@ interface VideoServiceSectionProps {
 
 export function VideoServiceSection({
   videoSrc,
+  posterSrc,
   title,
   description,
   boldName,
@@ -28,6 +30,7 @@ export function VideoServiceSection({
         loop
         muted
         playsInline
+        poster={posterSrc}
         className="absolute inset-0 z-0 h-full w-full object-cover"
       >
         <source src={videoSrc} />

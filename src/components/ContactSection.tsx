@@ -15,16 +15,6 @@ const contacts: ContactInfo[] = [
     phone: "+54 9 2644 05-0113",
     email: "M.rodriguez@gpiconsultores.com.ar",
   },
-  {
-    name: "Julián Bouyssi",
-    phone: "+54 9 2644 36-5840",
-    email: "Jbpuyssi@gpiconsultores.com.ar",
-  },
-  {
-    name: "Jimena Daneri",
-    phone: "+54 9 2645 64-8284",
-    email: "Jdaneri@gpiconsultotres.com.ar",
-  },
 ];
 
 type SubmitStatus =

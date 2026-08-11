@@ -16,22 +16,67 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 const SITE_DESCRIPTION =
-  "GPI Consultores - Gestión de Proyectos de Inversión. Expertos en Formulación, Desarrollo, Gestión y Financiamiento de Proyectos de Inversión.";
+  "GPI Consultores - Gestión de Proyectos de Inversión. Expertos en Formulación, Desarrollo, Gestión y Financiamiento de Proyectos de Inversión en San Juan, Argentina.";
+
+const OG_IMAGE = "/seo/og-image.png";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://gpiconsultores.com.ar"),
   title: {
-    default: "GPI Consultores | Gestión de Proyectos de Inversión",
+    default: "GPI Consultores | Gestión de Proyectos de Inversión — San Juan",
     template: "%s | GPI Consultores",
   },
   description: SITE_DESCRIPTION,
   openGraph: {
     type: "website",
     locale: "es_AR",
+    url: "https://gpiconsultores.com.ar",
     siteName: "GPI Consultores",
+    title: "GPI Consultores | Gestión de Proyectos de Inversión — San Juan",
+    description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "GPI Consultores — Gestión de Proyectos de Inversión",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
     title: "GPI Consultores | Gestión de Proyectos de Inversión",
     description: SITE_DESCRIPTION,
+    images: [OG_IMAGE],
   },
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "GPI Consultores",
+  url: "https://gpiconsultores.com.ar",
+  logo: "https://gpiconsultores.com.ar/images/logo-gpi.png",
+  description: SITE_DESCRIPTION,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "San Juan",
+    addressRegion: "San Juan",
+    addressCountry: "AR",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+54-9-2644-05-0113",
+    contactType: "customer service",
+    availableLanguage: ["Spanish", "English"],
+  },
+  sameAs: [
+    "https://www.linkedin.com/company/gpi-consultores-srl/",
+  ],
 };
 
 export default function RootLayout({
@@ -44,6 +89,12 @@ export default function RootLayout({
       lang="es"
       className={`${inter.variable} ${plusJakartaSans.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col font-sans">
         {children}
         {/* Hidden Google Translate widget */}
@@ -65,3 +116,4 @@ export default function RootLayout({
     </html>
   );
 }
+

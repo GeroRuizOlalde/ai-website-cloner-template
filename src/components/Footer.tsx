@@ -22,6 +22,7 @@ export function Footer() {
               alt="GPI Consultores"
               width={224}
               height={74}
+              loading="lazy"
               className="h-[74px] w-auto mb-5 mx-auto md:mx-0"
             />
             <p className="text-white text-[15px] leading-[1.65] mb-4">

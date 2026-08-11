@@ -7,7 +7,7 @@ import { ArrowRightIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Sobre Nosotros",
+  title: "Sobre Nosotros — Consultora en San Juan, Argentina",
   description:
     "Fundada en 2007 en San Juan, GPI Consultores es líder en generación y gestión de proyectos de inversión. Conocé nuestra historia, misión, valores y equipo.",
 };
@@ -214,15 +214,6 @@ const leaders: Leader[] = [
     cvEs: "/pdfs/CV-Marcelo-Rodriguez-ES.pdf",
     cvEn: "/pdfs/CV-Marcelo-Rodriguez-EN.pdf",
     reversed: false,
-  },
-  {
-    name: "Jimena Daneri",
-    imgSrc: "/images/jimena-daneri.jpg",
-    bio: "Jimena Daneri, abogada especializada en la direcci\u00f3n y gesti\u00f3n de negocios mineros en todas sus fases, con 25 a\u00f1os de experiencia en desarrollo de negocios mineros, asesoramiento en estrategia de propiedad minera, aspectos ambientales y regulatorios, as\u00ed como contratos mineros de todo tipo y de servicios inherentes a esta materia. Ha participado en el start up de algunas empresas en Argentina y ha sido parte del equipo negociador de diversos joint venture, fusiones y financiamiento de operaciones mineras en Argentina.",
-    extended: "Ha desarrollado gran parte de su actividad profesional en compa\u00f1\u00edas multinacionales, como Fortescue Metals Group, donde fue Gerente de Legales y Ambiente para la regi\u00f3n Sudam\u00e9rica (con actividad en Argentina, Brasil, Chile, Per\u00fa, Ecuador y Colombia); Directora Ejecutiva Adjunta y previamente Gerente Senior de Legales para Barrick Gold Corporation en Argentina y, adem\u00e1s, se desempe\u00f1\u00f3 como asesora legal in house de Minera Argentina Gold SA, bajo el control del grupo canadiense Lundin Mining Company y, luego, del norteamericano, Homestake Mining Company. Por otro lado, se ha desempe\u00f1ado como docente de la c\u00e1tedra de contratos de la carrera de derecho de la Universidad Cat\u00f3lica de Cuyo (UCC), San Juan, siendo actualmente miembro del cuerpo docente de la Maestr\u00eda de Gesti\u00f3n de Negocios Mineros de esa casa de estudios. Integra la Comisi\u00f3n Directiva de la C\u00e1mara Minera de San Juan (CMSJ) y la ONG Woman in Mining Argentina (WIM).",
-    cvEs: "/pdfs/CV-Jimena-Daneri-ES.pdf",
-    cvEn: "/pdfs/CV-Jimena-Daneri-EN.pdf",
-    reversed: true,
   },
 ];
 

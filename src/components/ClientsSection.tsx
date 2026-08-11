@@ -28,12 +28,6 @@ const duplicatedLogos = [...logos, ...logos];
 export function ClientsSection() {
   return (
     <section className="bg-white py-10 px-3">
-      <style>{`
-        @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-      `}</style>
 
       {/* Heading Area */}
       <Reveal className="text-center">
@@ -59,7 +53,7 @@ export function ClientsSection() {
               alt={logo.alt}
               width={220}
               height={160}
-              unoptimized
+              loading="lazy"
               className="h-[100px] w-auto max-w-[150px] md:h-[160px] md:max-w-[220px] object-contain flex-shrink-0"
             />
           ))}

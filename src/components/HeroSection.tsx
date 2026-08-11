@@ -7,6 +7,7 @@ export function HeroSection() {
         loop
         muted
         playsInline
+        poster="/images/sobre-nosotros-hero.jpg"
         className="absolute inset-0 z-0 h-full w-full object-cover"
       >
         <source src="/videos/hero-mountain.mp4" type="video/mp4" />
@@ -17,9 +18,9 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-[2] max-w-[900px] px-5 text-center">
-        <h2 className="gpi-hero-in mb-5 font-heading text-[32px] font-semibold leading-[1.3] text-white md:text-[48px]">
+        <h1 className="gpi-hero-in mb-5 font-heading text-[32px] font-semibold leading-[1.3] text-white md:text-[48px]">
           ¡Bienvenidos a GPI!
-        </h2>
+        </h1>
 
         <p className="gpi-hero-in gpi-hero-in-delay-1 mx-auto max-w-[800px] font-sans text-base leading-[1.65] text-white md:text-lg">
           ¡Lideramos el camino hacia el éxito de tus inversiones. Con un enfoque

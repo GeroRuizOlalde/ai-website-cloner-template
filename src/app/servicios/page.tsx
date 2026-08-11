@@ -7,9 +7,9 @@ import { ServiceCardsGrid } from "@/components/ServiceCardsGrid";
 import { ContactCTA } from "@/components/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "Servicios",
+  title: "Servicios de Consultoría en Proyectos de Inversión — San Juan",
   description:
-    "Desarrollos y Due Diligence, Formulación y Evaluación de Proyectos, Ingeniería y Construcción, Consultoría Económica-Financiera y Asesoramiento Legal en Negocios Mineros.",
+    "Desarrollos y Due Diligence, Formulación y Evaluación de Proyectos, Ingeniería y Construcción, Consultoría Económica-Financiera y Asesoramiento Legal en Negocios Mineros en San Juan, Argentina.",
 };
 
 export default function ServiciosPage() {
