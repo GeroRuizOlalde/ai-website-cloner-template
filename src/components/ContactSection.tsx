@@ -5,7 +5,7 @@ import { Reveal } from "@/components/Reveal";
 
 interface ContactInfo {
   name: string;
-  phone: string;
+  phone?: string;
   email: string;
 }
 
@@ -14,6 +14,10 @@ const contacts: ContactInfo[] = [
     name: "Marcelo Rodriguez",
     phone: "+54 9 2644 05-0113",
     email: "M.rodriguez@gpiconsultores.com.ar",
+  },
+  {
+    name: "Administración",
+    email: "administracion@gpiconsultores.com.ar",
   },
 ];
 
@@ -227,13 +231,18 @@ export function ContactSection() {
           {contacts.map((contact) => (
             <div key={contact.name}>
               <p className="font-sans text-[17px] leading-[1.65] text-gpi-text">
-                <span className="font-bold">{contact.name}</span>:{" "}
-                <a
-                  href={`tel:${contact.phone.replace(/[^\d+]/g, "")}`}
-                  className="transition-colors hover:text-[#DD183B] hover:underline"
-                >
-                  {contact.phone}
-                </a>
+                <span className="font-bold">{contact.name}</span>
+                {contact.phone && (
+                  <>
+                    :{" "}
+                    <a
+                      href={`tel:${contact.phone.replace(/[^\d+]/g, "")}`}
+                      className="transition-colors hover:text-[#DD183B] hover:underline"
+                    >
+                      {contact.phone}
+                    </a>
+                  </>
+                )}
               </p>
               <p className="font-sans text-[17px] leading-[1.65] text-gpi-text">
                 <a
