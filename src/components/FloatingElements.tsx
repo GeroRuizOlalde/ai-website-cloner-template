@@ -8,10 +8,20 @@ export function FloatingElements() {
 
   useEffect(() => {
     function handleScroll() {
-      setShowScrollTop(window.scrollY > 300);
+      const scrollY = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+      setShowScrollTop(scrollY > 300);
     }
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    // Also attach to document just in case
+    document.addEventListener("scroll", handleScroll, { passive: true, capture: true });
+    
+    // Initial check
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("scroll", handleScroll, { capture: true });
+    };
   }, []);
 
   return (
@@ -32,11 +42,11 @@ export function FloatingElements() {
         type="button"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         aria-label="Scroll to top"
-        className={`fixed bottom-5 right-5 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-[#DD183B] text-white shadow-lg transition-opacity duration-300 hover:bg-[#c41534] ${
-          showScrollTop ? "opacity-100" : "pointer-events-none opacity-0"
+        className={`fixed bottom-[80px] right-5 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#DD183B] text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-[#c41534] ${
+          showScrollTop ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"
         }`}
       >
-        <ChevronUpIcon className="h-5 w-5" />
+        <ChevronUpIcon className="h-6 w-6" />
       </button>
     </>
   );

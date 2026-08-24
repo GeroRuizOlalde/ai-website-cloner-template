@@ -13,7 +13,7 @@ export function Footer() {
   return (
     <footer>
       {/* Main Footer */}
-      <div className="bg-gpi-footer py-16 px-10">
+      <div className="bg-[#303332] py-16 px-10">
         <div className="mx-auto max-w-[1200px] grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* Column 1 - Logo & Description */}
           <div className="text-center md:text-left">
@@ -29,8 +29,7 @@ export function Footer() {
               En <span className="font-semibold">GPI Consultores</span> ayudamos
               a las empresas ofreciendo soluciones integrales en Identificación,
               Desarrollo y Gerenciamiento de Proyectos, Consultoría Económica y
-              Financiera, M&A, Asesoramiento Legal Integral en Negocios Mineros y
-              Servicios de Construcción.
+              Financiera, M&A y Asesoramiento Legal Integral en Negocios Mineros.
             </p>
             <p className="text-white text-[15px]">
               Copyright &copy; 2026 GPI Consultores
@@ -70,7 +69,7 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-gpi-footer-bottom h-[70px] flex items-center justify-center">
+      <div className="bg-[#1C1C1C] h-[70px] flex items-center justify-center">
         <p className="text-white text-sm">
           Powered by{" "}
           <a href="https://rivaestudio.com.ar/" target="_blank" rel="noopener noreferrer" className="text-[#DD183B] hover:underline">
@@ -81,3 +80,4 @@ export function Footer() {
     </footer>
   );
 }
+

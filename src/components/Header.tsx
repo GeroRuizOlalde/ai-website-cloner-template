@@ -27,7 +27,7 @@ export function Header() {
   return (
     <header>
       {/* Top Bar */}
-      <div className="flex h-[41px] items-center justify-end bg-gpi-dark px-10">
+      <div className="flex h-[41px] items-center justify-end bg-[#140609] px-10">
         <a
           href="https://www.linkedin.com/company/gpi-consultores-srl/posts/?feedView=all"
           target="_blank"
@@ -59,7 +59,7 @@ export function Header() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="font-sans text-[18px] font-normal text-gpi-nav-text"
+                className="font-sans text-[18px] font-normal text-[#222222]"
               >
                 {link.label}
               </Link>
@@ -99,17 +99,17 @@ export function Header() {
             aria-expanded={mobileMenuOpen}
           >
             <span
-              className={`block h-0.5 w-6 bg-gpi-dark transition-transform ${
+              className={`block h-0.5 w-6 bg-[#140609] transition-transform ${
                 mobileMenuOpen ? "translate-y-2 rotate-45" : ""
               }`}
             />
             <span
-              className={`block h-0.5 w-6 bg-gpi-dark transition-opacity ${
+              className={`block h-0.5 w-6 bg-[#140609] transition-opacity ${
                 mobileMenuOpen ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`block h-0.5 w-6 bg-gpi-dark transition-transform ${
+              className={`block h-0.5 w-6 bg-[#140609] transition-transform ${
                 mobileMenuOpen ? "-translate-y-2 -rotate-45" : ""
               }`}
             />
@@ -124,7 +124,7 @@ export function Header() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="font-sans text-[18px] font-normal text-gpi-nav-text"
+                  className="font-sans text-[18px] font-normal text-[#222222]"
                 >
                   {link.label}
                 </Link>
@@ -158,3 +158,4 @@ export function Header() {
     </header>
   );
 }
+

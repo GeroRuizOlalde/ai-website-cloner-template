@@ -230,7 +230,7 @@ export function ContactSection() {
         <div className="flex flex-col gap-6">
           {contacts.map((contact) => (
             <div key={contact.name}>
-              <p className="font-sans text-[17px] leading-[1.65] text-gpi-text">
+              <p className="font-sans text-[17px] leading-[1.65] text-[#3A3A3A]">
                 <span className="font-bold">{contact.name}</span>
                 {contact.phone && (
                   <>
@@ -244,7 +244,7 @@ export function ContactSection() {
                   </>
                 )}
               </p>
-              <p className="font-sans text-[17px] leading-[1.65] text-gpi-text">
+              <p className="font-sans text-[17px] leading-[1.65] text-[#3A3A3A]">
                 <a
                   href={`mailto:${contact.email}`}
                   className="break-all transition-colors hover:text-[#DD183B] hover:underline"
@@ -259,3 +259,4 @@ export function ContactSection() {
     </section>
   );
 }
+

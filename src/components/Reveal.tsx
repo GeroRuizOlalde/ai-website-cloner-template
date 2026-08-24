@@ -30,15 +30,8 @@ export function Reveal({
 }: RevealProps) {
   const { ref, visible } = useReveal<HTMLDivElement>();
 
-  const style: CSSProperties = {
-    opacity: visible ? 1 : 0,
-    transform: visible ? "translate3d(0, 0, 0)" : offsets[direction],
-    transition: `opacity ${duration}ms ease-out ${delay}ms, transform ${duration}ms ease-out ${delay}ms`,
-    willChange: "opacity, transform",
-  };
-
   return (
-    <div ref={ref} style={style} className={className}>
+    <div ref={ref} className={className}>
       {children}
     </div>
   );

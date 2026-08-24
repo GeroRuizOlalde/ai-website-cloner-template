@@ -1,7 +1,6 @@
 import {
   BriefcaseIcon,
   ServerIcon,
-  BuildingIcon,
   MoneyIcon,
   LegalMiningIcon,
 } from "@/components/icons";
@@ -28,12 +27,6 @@ const services: ServiceCard[] = [
       "Realizamos estudios de pre factibilidad, factibilidad y evaluaciones económicas financieras para asegurar la rentabilidad y sostenibilidad del proyecto.",
   },
   {
-    icon: BuildingIcon,
-    title: "Servicios de Ingeniería y Construcción",
-    description:
-      "Acompañamos cada etapa de obras civiles, desde la planificación inicial hasta la entrega final, garantizando calidad y satisfacción en todo el proceso.",
-  },
-  {
     icon: MoneyIcon,
     title: "Consultoría Económica y Financiera",
     description:
@@ -49,7 +42,7 @@ const services: ServiceCard[] = [
 
 export function ServiceCardsGrid() {
   return (
-    <section className="mx-auto grid max-w-[1200px] grid-cols-1 gap-5 px-5 pt-[30px] pb-7 md:grid-cols-2 lg:grid-cols-3">
+    <section className="mx-auto grid max-w-[1200px] grid-cols-1 gap-6 px-5 pt-[30px] pb-7 md:grid-cols-2">
       {services.map((service, index) => (
         <Reveal
           key={service.title}
@@ -68,7 +61,7 @@ export function ServiceCardsGrid() {
           <div className="mb-5 h-[3px] w-[145px] bg-[#DD183B] transition-all duration-300 group-hover:w-[180px]" />
 
           {/* Description */}
-          <p className="font-sans text-lg leading-[1.65] text-gpi-text">
+          <p className="font-sans text-lg leading-[1.65] text-[#3A3A3A]">
             {service.description}
           </p>
         </Reveal>
@@ -76,3 +69,4 @@ export function ServiceCardsGrid() {
     </section>
   );
 }
+

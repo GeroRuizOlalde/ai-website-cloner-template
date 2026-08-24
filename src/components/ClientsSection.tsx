@@ -3,7 +3,6 @@ import { Reveal } from "@/components/Reveal";
 
 const logos = [
   { src: "/images/clients/emave.webp", alt: "Emave" },
-  { src: "/images/clients/sendero-resources.jpeg", alt: "Sendero Resources" },
   { src: "/images/clients/brt.png", alt: "BRt" },
   { src: "/images/clients/intersat.png", alt: "InterSat" },
   { src: "/images/clients/polo-sur.png", alt: "Polo Sur Aviation" },
@@ -16,7 +15,6 @@ const logos = [
   { src: "/images/clients/fortuna.webp", alt: "Fortuna" },
   { src: "/images/clients/ppi.png", alt: "PPI" },
   { src: "/images/clients/mgs-consulting.webp", alt: "MGS Consulting" },
-  { src: "/images/clients/ngx.png", alt: "NGX" },
   { src: "/images/clients/ceras.webp", alt: "Ceras" },
   { src: "/images/clients/3mg.png", alt: "3MG" },
   { src: "/images/clients/logo-1.png", alt: "Client" },

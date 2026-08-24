@@ -54,7 +54,7 @@ function NuestraHistoria() {
           <h3 className="mb-4 font-heading text-2xl font-semibold text-[#0F172A]">
             Nuestra Historia
           </h3>
-          <div className="space-y-4 font-sans text-lg leading-[1.65] text-gpi-text">
+          <div className="space-y-4 font-sans text-lg leading-[1.65] text-[#3A3A3A]">
             <p>
               Fundada en 2007, <strong>GPI Consultores</strong> ha evolucionado
               desde sus inicios como una consultora radicada en la provincia de{" "}
@@ -85,7 +85,7 @@ function NuestraHistoria() {
 
         {/* Right column */}
         <Reveal direction="left" delay={150} className="flex-1">
-          <div className="space-y-4 font-sans text-lg leading-[1.65] text-gpi-text">
+          <div className="space-y-4 font-sans text-lg leading-[1.65] text-[#3A3A3A]">
             <p>
               Entre nuestros hitos m&aacute;s destacados se encuentra la exitosa
               gesti&oacute;n de financiamiento a trav&eacute;s de organismos como el BID, el
@@ -118,7 +118,7 @@ function MisionVision() {
             Nuestra Misi&oacute;n
           </h3>
           <div className="mb-4 h-[3px] w-[80px] bg-[#DD183B]" />
-          <p className="font-sans text-lg leading-[1.65] text-gpi-text">
+          <p className="font-sans text-lg leading-[1.65] text-[#3A3A3A]">
             Proporcionar consultor&iacute;a experta en la b&uacute;squeda y gesti&oacute;n de
             proyectos de inversi&oacute;n, asegurando el &eacute;xito y la sostenibilidad de
             los proyectos de nuestros clientes.
@@ -131,7 +131,7 @@ function MisionVision() {
             Nuestra Visi&oacute;n
           </h3>
           <div className="mb-4 h-[3px] w-[80px] bg-[#DD183B]" />
-          <p className="font-sans text-lg leading-[1.65] text-gpi-text">
+          <p className="font-sans text-lg leading-[1.65] text-[#3A3A3A]">
             Ser reconocidos como l&iacute;deres en servicios de consultor&iacute;a
             econ&oacute;mica, jur&iacute;dica y t&eacute;cnica orientada a lograr la concreci&oacute;n de
             proyectos de inversi&oacute;n sostenibles, innovando y adapt&aacute;ndonos a las
@@ -179,12 +179,12 @@ function ValoresSection() {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {valores.map((v, i) => (
           <Reveal key={v.num} delay={i * 100} className="group">
-            <p className="mb-1 font-sans text-base text-gpi-text">{v.num}</p>
+            <p className="mb-1 font-sans text-base text-[#3A3A3A]">{v.num}</p>
             <h5 className="mb-2 font-heading text-lg font-semibold text-[#0F172A]">
               {v.title}
             </h5>
             <div className="mb-3 h-[3px] w-[80px] bg-[#DD183B] transition-all duration-300 group-hover:w-[120px]" />
-            <p className="font-sans text-base leading-[1.65] text-gpi-text">
+            <p className="font-sans text-base leading-[1.65] text-[#3A3A3A]">
               {v.desc}
             </p>
           </Reveal>
@@ -242,7 +242,7 @@ function LeadersSection() {
                 <h3 className="mb-4 font-heading text-2xl font-semibold text-[#0F172A]">
                   {leader.name}
                 </h3>
-                <p className="font-sans text-lg leading-[1.65] text-gpi-text">
+                <p className="font-sans text-lg leading-[1.65] text-[#3A3A3A]">
                   {leader.bio}
                 </p>
               </div>
@@ -260,7 +260,7 @@ function LeadersSection() {
             </div>
 
             {/* Extended bio */}
-            <p className="font-sans text-lg leading-[1.65] text-gpi-text">
+            <p className="font-sans text-lg leading-[1.65] text-[#3A3A3A]">
               {leader.extended}
             </p>
 
@@ -310,3 +310,4 @@ export default function SobreNosotrosPage() {
     </>
   );
 }
+

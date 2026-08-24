@@ -40,15 +40,21 @@ export function VideoServiceSection({
       <div className="absolute inset-0 z-[1] bg-black/40" />
 
       {/* Content */}
-      <Reveal className="relative z-[2] max-w-[900px] px-5 text-center">
-        <h2 className="mb-2 font-heading text-[32px] font-semibold text-white md:text-[48px]">
+      <div className="relative z-[2] max-w-[900px] px-5 text-center">
+        <h2 
+          className="mb-2 font-heading text-[32px] font-semibold text-white md:text-[48px]"
+          style={{ color: "#ffffff" }}
+        >
           {title}
         </h2>
 
         {/* Red Separator */}
         <div className="mx-auto mb-5 h-[3px] w-[280px] bg-[#DD183B]" />
 
-        <p className="text-center font-sans text-base leading-[1.65] text-white md:text-[19px]">
+        <p 
+          className="text-center font-sans text-base leading-[1.65] text-white md:text-[19px]"
+          style={{ color: "#ffffff" }}
+        >
           {boldIndex >= 0 ? (
             <>
               {beforeBold}
@@ -76,7 +82,7 @@ export function VideoServiceSection({
             ))}
           </div>
         )}
-      </Reveal>
+      </div>
     </section>
   );
 }
