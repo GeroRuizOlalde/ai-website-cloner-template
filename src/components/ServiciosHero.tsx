@@ -2,7 +2,7 @@ export function ServiciosHero() {
   return (
     <section
       className="relative flex min-h-[200px] flex-col items-center justify-center overflow-hidden bg-cover py-[50px] px-[50px]"
-      style={{ backgroundImage: "url('/images/servicios-hero.webp')", backgroundPosition: "51% 8%" }}
+      style={{ backgroundImage: "url('/images/sobre-nosotros-hero.jpg')", backgroundPosition: "center" }}
     >
       {/* Dark Overlay */}
       <div className="absolute inset-0 z-[1] bg-black/50" />
