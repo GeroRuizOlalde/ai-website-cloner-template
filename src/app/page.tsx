@@ -24,8 +24,8 @@ export default function Home() {
           boldName="GPI CONSULTORES"
           description="En GPI CONSULTORES nos centramos en Desarrollo y Due Diligence de negocios, en Formulación de Proyectos, en Consultoría Económica-Financiera y en Asesoramiento Legal Integral de Negocios Mineros."
           buttons={[
-            { label: "PDF Español", href: "/pdfs/Español Brochure GPI-2025.pdf" },
-            { label: "PDF Ingles", href: "/pdfs/Ingles Brochure GPI - 2025.pdf" },
+            { label: "PDF Español", href: "/pdfs/Brochure-GPI-2025-ES.pdf" },
+            { label: "PDF Ingles", href: "/pdfs/Brochure-GPI-2025-EN.pdf" },
           ]}
         />
 
